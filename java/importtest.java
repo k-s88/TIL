@@ -5,7 +5,7 @@ public class importtest {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
 
-        System.out.println(str + "‚Æ“ü—Í‚³‚ê‚Ü‚µ‚½");
+        System.out.println(str + "ã¨å…¥åŠ›ã•ã‚Œã¾ã—ãŸ");
         sc.close();
     }
 }
