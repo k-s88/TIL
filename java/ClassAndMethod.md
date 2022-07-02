@@ -6,6 +6,6 @@
 関数とも  
 機能ごとに作成  
 EX)  
-`static int sum(int num1 , int num2){  
- int calcResult = num1 + num2 ;  
- return calc Result ; `  
+`static int sum(int num1 , int num2){`  
+`int calcResult = num1 + num2 ;`  
+`return calc Result ;`  
