@@ -11,6 +11,6 @@ EX)
 `int calcResult = num1 + num2 ;`  
 `return calc Result ;`  
 `int`が戻り値の型、`return X` が戻り値を返す文  
-戻り値の型の部分に`void`を記述すると戻り値存在なしとなる  
+戻り値の型の部分に`void`を記述すると戻り値なし
   
 mainメソッドから始まりmainメソッドで終わる
