@@ -9,7 +9,7 @@
 EX)  
 `static int sum(int num1 , int num2){`  
 `int calcResult = num1 + num2 ;`  
-`return calc Result ;`  
+`return calcResult ;`  
 `int`が戻り値の型、`return X` が戻り値を返す文  
 戻り値の型の部分に`void`を記述すると戻り値なし
   
