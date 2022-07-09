@@ -20,7 +20,8 @@ public class Payroll {
 		// ミリ秒で取得した労働時間を○時間△分の形式に直す
 		int workingHour = (int)( workingTime / ONE_HOUR_BY_MILLI_SEC );                      // 時間に換算
 		int workingMin  = (int)( ( workingTime / ONE_MIN_BY_MILLI_SEC ) % ONE_HOUR_BY_MIN ); // 分に換算
-
+	
+	// 以下課題部分
         // 給与計算
         final int wage = 15 ; // 1分あたりの給与
         final int restTime1 = 45 ; // 労働時間が6～8時間の場合の休憩時間
@@ -28,7 +29,7 @@ public class Payroll {
         final double excessMag = 1.25 ; // 超過分の倍率
         final int legalWorkingHours = 480 ; // 法定労働時間
         
-        int workingTimeConv = workingHour * 60 + workingMin ; 
+        int workingTimeConv = workingHour * 60 + workingMin ; //労働時間を分単位で合計
         int TotalWage = 0; 
 
         if(workingTimeConv <= 360){
