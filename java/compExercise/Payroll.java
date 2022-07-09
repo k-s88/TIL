@@ -4,29 +4,29 @@ public class Payroll {
 
 	public static void main(String[] args) {
 
-		// ŒvZ—p‚Ì”’l‚ğ’è”‚Å—pˆÓ
-		final long ONE_HOUR_BY_MILLI_SEC = 1000 * 60 * 60; // 1ŠÔ‚Ìƒ~ƒŠ•bŠ·Z
-		final long ONE_MIN_BY_MILLI_SEC  = 1000 * 60;      // 1•ª‚Ìƒ~ƒŠ•bŠ·Z
-		final int  ONE_HOUR_BY_MIN       = 60;             // 1ŠÔ‚Ì•ªŠ·Z
+		// è¨ˆç®—ç”¨ã®æ•°å€¤ã‚’å®šæ•°ã§ç”¨æ„
+		final long ONE_HOUR_BY_MILLI_SEC = 1000 * 60 * 60; // 1æ™‚é–“ã®ãƒŸãƒªç§’æ›ç®—
+		final long ONE_MIN_BY_MILLI_SEC  = 1000 * 60;      // 1åˆ†ã®ãƒŸãƒªç§’æ›ç®—
+		final int  ONE_HOUR_BY_MIN       = 60;             // 1æ™‚é–“ã®åˆ†æ›ç®—
 
-		// ƒoƒCƒg‚ÌŠJnŠÔ‚ÆI—¹ŠÔ‚ğƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”‚©‚çó‚¯æ‚é
+		// ãƒã‚¤ãƒˆã®é–‹å§‹æ™‚é–“ã¨çµ‚äº†æ™‚é–“ã‚’ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°ã‹ã‚‰å—ã‘å–ã‚‹
 		Time startTime  = Time.valueOf(args[0]);
 		Time finishTime = Time.valueOf(args[1]);
 
-		// getTimeƒƒ\ƒbƒh‚ğg‚Á‚Ä˜J“­ŠÔ‚ğƒ~ƒŠ•bi0.001•b’PˆÊj‚Åæ“¾‚·‚é
-		// ¦getTime()ƒƒ\ƒbƒh‚Ì–ß‚è’l‚ÍlongŒ^‚Å‚ ‚é‚±‚Æ‚É’ˆÓ
+		// getTimeãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ã£ã¦åŠ´åƒæ™‚é–“ã‚’ãƒŸãƒªç§’ï¼ˆ0.001ç§’å˜ä½ï¼‰ã§å–å¾—ã™ã‚‹
+		// â€»getTime()ãƒ¡ã‚½ãƒƒãƒ‰ã®æˆ»ã‚Šå€¤ã¯longå‹ã§ã‚ã‚‹ã“ã¨ã«æ³¨æ„
 		long workingTime = finishTime.getTime() - startTime.getTime();
 
-		// ƒ~ƒŠ•b‚Åæ“¾‚µ‚½˜J“­ŠÔ‚ğ›ŠÔ¢•ª‚ÌŒ`®‚É’¼‚·
-		int workingHour = (int)( workingTime / ONE_HOUR_BY_MILLI_SEC );                      // ŠÔ‚ÉŠ·Z
-		int workingMin  = (int)( ( workingTime / ONE_MIN_BY_MILLI_SEC ) % ONE_HOUR_BY_MIN ); // •ª‚ÉŠ·Z
+		// ãƒŸãƒªç§’ã§å–å¾—ã—ãŸåŠ´åƒæ™‚é–“ã‚’â—‹æ™‚é–“â–³åˆ†ã®å½¢å¼ã«ç›´ã™
+		int workingHour = (int)( workingTime / ONE_HOUR_BY_MILLI_SEC );                      // æ™‚é–“ã«æ›ç®—
+		int workingMin  = (int)( ( workingTime / ONE_MIN_BY_MILLI_SEC ) % ONE_HOUR_BY_MIN ); // åˆ†ã«æ›ç®—
 
-        // ‹‹—^ŒvZ
-        final int wage = 15 ; // 1•ª‚ ‚½‚è‚Ì‹‹—^
-        final int restTime1 = 45 ; // ˜J“­ŠÔ‚ª6`8ŠÔ‚Ìê‡‚Ì‹xŒeŠÔ
-        final int restTime2 = 60 ; // ˜J“­ŠÔ‚ª8ŠÔˆÈã‚Ìê‡‚Ì‹xŒeŠÔ
-        final double excessMag = 1.25 ; // ’´‰ß•ª‚Ì”{—¦
-        final int legalWorkingHours = 480 ;
+        // çµ¦ä¸è¨ˆç®—
+        final int wage = 15 ; // 1åˆ†ã‚ãŸã‚Šã®çµ¦ä¸
+        final int restTime1 = 45 ; // åŠ´åƒæ™‚é–“ãŒ6ï½8æ™‚é–“ã®å ´åˆã®ä¼‘æ†©æ™‚é–“
+        final int restTime2 = 60 ; // åŠ´åƒæ™‚é–“ãŒ8æ™‚é–“ä»¥ä¸Šã®å ´åˆã®ä¼‘æ†©æ™‚é–“
+        final double excessMag = 1.25 ; // è¶…éåˆ†ã®å€ç‡
+        final int legalWorkingHours = 480 ; // æ³•å®šåŠ´åƒæ™‚é–“
         
         int workingTimeConv = workingHour * 60 + workingMin ; 
         int TotalWage = 0; 
@@ -46,7 +46,7 @@ public class Payroll {
         }
 
         
-        // o—Í
-		System.out.println("–{“ú‚Ì‹‹—^‚Í" + TotalWage + "‰~‚Å‚·B");
+        // å‡ºåŠ›
+		System.out.println("æœ¬æ—¥ã®çµ¦ä¸ã¯" + TotalWage + "å††ã§ã™ã€‚");
 	}
 }
