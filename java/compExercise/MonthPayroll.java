@@ -10,25 +10,25 @@ import java.util.List;
 public class MonthPayroll {
 	public static void main(String[] args) {
 		
-		//  WorkingResult.csv‚ÌƒpƒX ¦uC:\WorkSpacev’¼‰º‚É”z’u‚µ‚Ä‚¢‚È‚¢ê‡‚Í“K‹X•ÏX‚µ‚Ä‚­‚¾‚³‚¢B
+		//  WorkingResult.csvã®ãƒ‘ã‚¹ â€»ã€ŒC:\WorkSpaceã€ç›´ä¸‹ã«é…ç½®ã—ã¦ã„ãªã„å ´åˆã¯é©å®œå¤‰æ›´ã—ã¦ãã ã•ã„ã€‚
 		final String WORKING_RESULT_FILE_PATH = "C:\\WorkSpace\\WorkingResult.csv";
-		// ƒRƒ“ƒ}
+		// ã‚³ãƒ³ãƒ
 		final String COMMA = ","; 
 		
-		// ŒvZ—p‚Ì”’l‚ğ’è”‚Å—pˆÓ
-		final long ONE_HOUR_BY_MILLI_SEC = 1000 * 60 * 60; // 1ŠÔ‚Ìƒ~ƒŠ•bŠ·Z
-		final long ONE_MIN_BY_MILLI_SEC  = 1000 * 60;      // 1•ª‚Ìƒ~ƒŠ•bŠ·Z
-		final int  ONE_HOUR_BY_MIN       = 60;             // 1ŠÔ‚Ì•ªŠ·Z
+		// è¨ˆç®—ç”¨ã®æ•°å€¤ã‚’å®šæ•°ã§ç”¨æ„
+		final long ONE_HOUR_BY_MILLI_SEC = 1000 * 60 * 60; // 1æ™‚é–“ã®ãƒŸãƒªç§’æ›ç®—
+		final long ONE_MIN_BY_MILLI_SEC  = 1000 * 60;      // 1åˆ†ã®ãƒŸãƒªç§’æ›ç®—
+		final int  ONE_HOUR_BY_MIN       = 60;             // 1æ™‚é–“ã®åˆ†æ›ç®—
 		
-		List<String> workingResults = new ArrayList<String>(); //ƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚ñ‚¾ƒf[ƒ^‚ÌŠi”[—p
+		List<String> workingResults = new ArrayList<String>(); //ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰èª­ã¿è¾¼ã‚“ã ãƒ‡ãƒ¼ã‚¿ã®æ ¼ç´ç”¨
 		
-		//  WorkingResult.csv‚ğ“Ç‚İ‚Ş
+		//  WorkingResult.csvã‚’èª­ã¿è¾¼ã‚€
 		try {
-			// WorkingResult.csv‚Ì“Ç‚İ‚İ€”õ
+			// WorkingResult.csvã®èª­ã¿è¾¼ã¿æº–å‚™
 			File workingResultFile = new File(WORKING_RESULT_FILE_PATH);
 			BufferedReader br = new BufferedReader(new FileReader(workingResultFile));
 			
-			// WorkingResult.csv‚ğ1s‚¸‚Â“Ç‚İ‚ñ‚ÅArrayList‚ÉŠi”[‚·‚é
+			// WorkingResult.csvã‚’1è¡Œãšã¤èª­ã¿è¾¼ã‚“ã§ArrayListã«æ ¼ç´ã™ã‚‹
 			String recode = br.readLine();
 			while (recode != null) {
 				workingResults.add(recode);
@@ -39,10 +39,10 @@ public class MonthPayroll {
 			System.out.println(e);
 		}
 
-		final int wage = 15 ; // 1•ª‚ ‚½‚è‚Ì‹‹—^
-		final int restTime1 = 45 ; // ˜J“­ŠÔ‚ª6`8ŠÔ‚Ìê‡‚Ì‹xŒeŠÔ
-		final int restTime2 = 60 ; // ˜J“­ŠÔ‚ª8ŠÔˆÈã‚Ìê‡‚Ì‹xŒeŠÔ
-		final double excessMag = 1.25 ; // ’´‰ß•ª‚Ì”{—¦
+		final int wage = 15 ; // 1åˆ†ã‚ãŸã‚Šã®çµ¦ä¸
+		final int restTime1 = 45 ; // åŠ´åƒæ™‚é–“ãŒ6ï½8æ™‚é–“ã®å ´åˆã®ä¼‘æ†©æ™‚é–“
+		final int restTime2 = 60 ; // åŠ´åƒæ™‚é–“ãŒ8æ™‚é–“ä»¥ä¸Šã®å ´åˆã®ä¼‘æ†©æ™‚é–“
+		final double excessMag = 1.25 ; // è¶…éåˆ†ã®å€ç‡
 		final int legalWorkingHours = 480 ; 
 
 		int monthWage = 0;
@@ -50,41 +50,41 @@ public class MonthPayroll {
 
 		for (int i = 0; i < workingResults.size() ; i++) {
 			
-			String workingRecode    = workingResults.get(i);      // 1s‚¸‚Â•¶š—ñ‚ğæ‚èo‚·
-			String[] forSplitRecode = workingRecode.split(COMMA); // splitƒƒ\ƒbƒh‚ğ—p‚¢‚ÄƒJƒ“ƒ}‹æØ‚è‚Å•¶š—ñ‚ğ•ª‰ğ•”z—ñ‚É‚»‚ê‚¼‚êŠi”[
+			String workingRecode    = workingResults.get(i);      // 1è¡Œãšã¤æ–‡å­—åˆ—ã‚’å–ã‚Šå‡ºã™
+			String[] forSplitRecode = workingRecode.split(COMMA); // splitãƒ¡ã‚½ãƒƒãƒ‰ã‚’ç”¨ã„ã¦ã‚«ãƒ³ãƒåŒºåˆ‡ã‚Šã§æ–‡å­—åˆ—ã‚’åˆ†è§£ï¼†é…åˆ—ã«ãã‚Œãã‚Œæ ¼ç´
 
-			Time startTime   = Time.valueOf(forSplitRecode[1]); // o‹ÎŠÔ
-			Time finishTime  = Time.valueOf(forSplitRecode[2]); // ‘Ş‹ÎŠÔ
+			Time startTime   = Time.valueOf(forSplitRecode[1]); // å‡ºå‹¤æ™‚é–“
+			Time finishTime  = Time.valueOf(forSplitRecode[2]); // é€€å‹¤æ™‚é–“
 			
-			// getTimeƒƒ\ƒbƒh‚ğg‚Á‚Ä˜J“­ŠÔ‚ğƒ~ƒŠ•bi0.001•b’PˆÊj‚Åæ“¾‚·‚é
+			// getTimeãƒ¡ã‚½ãƒƒãƒ‰ã‚’ä½¿ã£ã¦åŠ´åƒæ™‚é–“ã‚’ãƒŸãƒªç§’ï¼ˆ0.001ç§’å˜ä½ï¼‰ã§å–å¾—ã™ã‚‹
 			long workingTime = finishTime.getTime() - startTime.getTime();
 			
-			// ƒ~ƒŠ•b‚Åæ“¾‚µ‚½˜J“­ŠÔ‚ğ›ŠÔ¢•ª‚ÌŒ`®‚É’¼‚·
-			int workingHour = (int)( workingTime / ONE_HOUR_BY_MILLI_SEC );                      // ŠÔ‚ÉŠ·Z
-			int workingMin  = (int)( ( workingTime / ONE_MIN_BY_MILLI_SEC ) % ONE_HOUR_BY_MIN ); // •ª‚ÉŠ·Z
+			// ãƒŸãƒªç§’ã§å–å¾—ã—ãŸåŠ´åƒæ™‚é–“ã‚’â—‹æ™‚é–“â–³åˆ†ã®å½¢å¼ã«ç›´ã™
+			int workingHour = (int)( workingTime / ONE_HOUR_BY_MILLI_SEC );                      // æ™‚é–“ã«æ›ç®—
+			int workingMin  = (int)( ( workingTime / ONE_MIN_BY_MILLI_SEC ) % ONE_HOUR_BY_MIN ); // åˆ†ã«æ›ç®—
 
-        	// ‹‹—^ŒvZ
+        	// çµ¦ä¸è¨ˆç®—
 			int workingTimeConv = workingHour * 60 + workingMin; 
 			int oneDateWage = 0;
 			
 
-        	if(workingTimeConv <= 360){																// 6ŠÔ–¢–
+        		if(workingTimeConv <= 360){												// 6æ™‚é–“æœªæº€
 				oneDateWage = wage * workingTimeConv;
 
-			}else if(workingTimeConv > 360 && workingTimeConv <= 480){								// 6ŠÔ‰z‚¦8ŠÔˆÈ‰º
+			}else if(workingTimeConv > 360 && workingTimeConv <= 480){								// 6æ™‚é–“è¶Šãˆ8æ™‚é–“ä»¥ä¸‹
 				oneDateWage = wage * (workingTimeConv - restTime1);
 
-			}else if(workingTimeConv > 480 && workingTimeConv < 540){								// 8ŠÔ‰z‚¦À˜J“­ŠÔ8ŠÔ–¢–
+			}else if(workingTimeConv > 480 && workingTimeConv < 540){								// 8æ™‚é–“è¶Šãˆå®ŸåŠ´åƒæ™‚é–“8æ™‚é–“æœªæº€
 				oneDateWage = wage * (workingTimeConv - restTime2);
 			
-			}else if(workingTimeConv > 540){														// À˜J“­ŠÔ8ŠÔ‰z‚¦i˜J“­ŠÔ9ŠÔ‰z‚¦j
+			}else if(workingTimeConv > 540){											// å®ŸåŠ´åƒæ™‚é–“8æ™‚é–“è¶Šãˆï¼ˆåŠ´åƒæ™‚é–“9æ™‚é–“è¶Šãˆï¼‰
 				int overtime = workingTimeConv - 540 ;
 				oneDateWage = (wage * legalWorkingHours) + (wage * (int)(excessMag) * overtime) ;
 			}
 
 			monthWage += oneDateWage;
 		}
-		// o—Í
-		System.out.println("¡Œ‚Ì‹‹—^‚Í" + monthWage + "‰~‚Å‚·B");
+		// å‡ºåŠ›
+		System.out.println("ä»Šæœˆã®çµ¦ä¸ã¯" + monthWage + "å††ã§ã™ã€‚");
     }
 }
