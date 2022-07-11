@@ -1,4 +1,4 @@
-//7ˆÈã7777777ˆÈ‰º‚Ì7‚Ì”{”‚ğ‘S‚Ä‘‚«o‚µ‚½‚Æ‚«A”šu7v‚Í‰½‰ñŒ»‚ê‚é‚©
+//7ä»¥ä¸Š7777777ä»¥ä¸‹ã®7ã®å€æ•°ã‚’å…¨ã¦æ›¸ãå‡ºã—ãŸã¨ãã€æ•°å­—ã€Œ7ã€ã¯ä½•å›ç¾ã‚Œã‚‹ã‹
 
 import java.util.zip.CheckedOutputStream;
 
@@ -10,19 +10,18 @@ public class test{
         String check = "";
         int count = 0;
 
-        for(int i = 0 ; number < 7777777 ; i++){                // ‚V‚Ì”{”‚ğnumber‚É“ü‚ê‚é
+        for(int i = 0 ; number < 7777777 ; i++){                // ï¼—ã®å€æ•°ã‚’numberã«å…¥ã‚Œã‚‹
             number = 7;
             number = number + (i * 7);
-            check = String.valueOf(number);                     // number‚ğ•¶š—ñ‚Æ‚µ‚Ächeck‚É“ü‚ê‚é
+            check = String.valueOf(number);                     // numberã‚’æ–‡å­—åˆ—ã¨ã—ã¦checkã«å…¥ã‚Œã‚‹
 
             for(int j = 0; j < check.length(); j++){
-                String ch = String.valueOf(check.charAt(j));    // check‚ğˆê•¶š‚¸‚Âæ‚èo‚·
-                if(ch.equals("7")){                             // æ‚èo‚µ‚½•¶š‚ª‚V‚È‚çƒJƒEƒ“ƒg‚·‚é
+                String ch = String.valueOf(check.charAt(j));    // checkã‚’ä¸€æ–‡å­—ãšã¤å–ã‚Šå‡ºã™
+                if(ch.equals("7")){                             // å–ã‚Šå‡ºã—ãŸæ–‡å­—ãŒï¼—ãªã‚‰ã‚«ã‚¦ãƒ³ãƒˆã™ã‚‹
                     count++ ;
                 }
             }
-        
         }   
-        System.out.println(count);                              // Œ‹‰Ê‚ğo—Í‚·‚é
+        System.out.println(count);                              // çµæœã‚’å‡ºåŠ›ã™ã‚‹
     }
 }
