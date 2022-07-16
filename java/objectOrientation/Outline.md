@@ -32,7 +32,7 @@ Stringクラスは特別なインスタンス化をする
 本来なら  
 `String X = new String("QWERTY");`  
 となるところ、  
-`String X = "QWERTY"`  
+`String X = "QWERTY";`  
 で済むようになっている（擬似プリミティブ）  
   
 インスタンスの活用  
