@@ -1,55 +1,60 @@
 class Ex2_02_1_Janken{
     public static void main (String[] args) {
         
-        //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¨­å®šã€å‡ºã™æ‰‹ã‚’ç¢ºå®š
+        //ƒvƒŒƒCƒ„[‚ğİ’è
 
-        Ex2_02_1_Player A = new Ex2_02_1_Player(args[0]);
-        A.makeHandStatus();
-        
+        Ex2_02_1_Player A = new Ex2_02_1_Player(args[0]);        
         Ex2_02_1_Player B = new Ex2_02_1_Player(args[1]);
+        
+        //‚¶‚á‚ñ‚¯‚ñ‚ÌŠJn
+        System.out.println("‚¶‚á‚ñ‚¯‚ñEEE‚Û‚ñIIIII");
+
+        //è‚ğo‚·
+        A.makeHandStatus();
         B.makeHandStatus();
         
-        //çµæœã®åˆ¤å®š
+        //o‚µ‚½è‚ğ•\¦
+        System.out.println(A.name + "‚³‚ñ‚ÌèF" + A.handStatus);
+        System.out.println(B.name + "‚³‚ñ‚ÌèF" + B.handStatus);
+
+        //Œ‹‰Ê‚Ì”»’è
         
         String result = "";
 
-        if(A.handStatus == "ã‚°ãƒ¼"){                 //Aã•ã‚“ãŒã‚°ãƒ¼ã®å ´åˆ
+        if(A.handStatus == "ƒO["){                 //A‚³‚ñ‚ªƒO[‚Ìê‡
 
-            if(B.handStatus == "ã‚°ãƒ¼"){
-                result = "ã‚ã„ã“ï¼å‹è² ã¤ã‹ãšï¼";
-            }else if(B.handStatus == "ãƒãƒ§ã‚­"){
-                result = A.name + "ã•ã‚“ã®å‹åˆ©ï¼";
-            }else if(B.handStatus == "ãƒ‘ãƒ¼"){
-                result = B.name + "ã•ã‚“ã®å‹åˆ©ï¼";
+            if(B.handStatus == "ƒO["){
+                result = "‚ ‚¢‚±IŸ•‰‚Â‚©‚¸I";
+            }else if(B.handStatus == "ƒ`ƒ‡ƒL"){
+                result = A.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ƒp["){
+                result = B.name + "‚³‚ñ‚ÌŸ—˜I";
             }
 
-        }else if(A.handStatus == "ãƒãƒ§ã‚­"){         //Aã•ã‚“ãŒãƒãƒ§ã‚­ã®å ´åˆ
+        }else if(A.handStatus == "ƒ`ƒ‡ƒL"){         //A‚³‚ñ‚ªƒ`ƒ‡ƒL‚Ìê‡
 
-            if(B.handStatus == "ã‚°ãƒ¼"){
-                result = B.name + "ã•ã‚“ã®å‹åˆ©ï¼";
-            }else if(B.handStatus == "ãƒãƒ§ã‚­"){
-                result = "ã‚ã„ã“ï¼å‹è² ã¤ã‹ãšï¼";
-            }else if(B.handStatus == "ãƒ‘ãƒ¼"){
-                result = A.name + "ã•ã‚“ã®å‹åˆ©ï¼";
+            if(B.handStatus == "ƒO["){
+                result = B.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ƒ`ƒ‡ƒL"){
+                result = "‚ ‚¢‚±IŸ•‰‚Â‚©‚¸I";
+            }else if(B.handStatus == "ƒp["){
+                result = A.name + "‚³‚ñ‚ÌŸ—˜I";
             }
 
-        }else if(A.handStatus == "ãƒ‘ãƒ¼"){           //Aã•ã‚“ãŒãƒ‘ãƒ¼ã®å ´åˆ
+        }else if(A.handStatus == "ƒp["){           //A‚³‚ñ‚ªƒp[‚Ìê‡
 
-            if(B.handStatus == "ã‚°ãƒ¼"){
-                result = A.name + "ã•ã‚“ã®å‹åˆ©ï¼";
-            }else if(B.handStatus == "ãƒãƒ§ã‚­"){
-                result = B.name + "ã•ã‚“ã®å‹åˆ©ï¼";
-            }else if(B.handStatus == "ãƒ‘ãƒ¼"){
-                result = "ã‚ã„ã“ï¼å‹è² ã¤ã‹ãšï¼";
+            if(B.handStatus == "ƒO["){
+                result = A.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ƒ`ƒ‡ƒL"){
+                result = B.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ƒp["){
+                result = "‚ ‚¢‚±IŸ•‰‚Â‚©‚¸I";
             }
 
         }
 
-        //çµæœã®å‡ºåŠ›
-        System.out.println("ã˜ã‚ƒã‚“ã‘ã‚“ãƒ»ãƒ»ãƒ»ã½ã‚“ï¼ï¼ï¼ï¼ï¼");
-        System.out.println(A.name + "ã•ã‚“ã®æ‰‹ï¼š" + A.handStatus);
-        System.out.println(B.name + "ã•ã‚“ã®æ‰‹ï¼š" + B.handStatus);
-        System.out.println("çµæœã¯ãƒ»ãƒ»ãƒ»");
+        //Œ‹‰Ê‚Ìo—Í
+        System.out.println("Œ‹‰Ê‚ÍEEE");
         System.out.println(result);
 
     }

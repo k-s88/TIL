@@ -6,11 +6,11 @@ class Ex2_02_1_Player{
     String handStatus;
 
     Ex2_02_1_Player(String nm){
-        name = nm;
+        this.name = nm;
     }
 
     void makeHandStatus(){
-        String[] hands = { "繧ｰ繝ｼ", "繝√Ι繧ｭ", "繝代�ｼ" };
+        String[] hands = { "グー", "チョキ", "パー" };
         Random r = new Random();
         handStatus = hands[r.nextInt(3)];
     }
