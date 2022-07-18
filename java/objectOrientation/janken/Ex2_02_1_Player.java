@@ -10,7 +10,7 @@ class Ex2_02_1_Player{
     }
 
     void makeHandStatus(){
-        String[] hands = { "グー", "チョキ", "パー" };
+        String[] hands = { "繧ｰ繝ｼ", "繝√Ι繧ｭ", "繝代�ｼ" };
         Random r = new Random();
         handStatus = hands[r.nextInt(3)];
     }
