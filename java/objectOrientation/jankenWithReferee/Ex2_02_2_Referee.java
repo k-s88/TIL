@@ -1,5 +1,3 @@
-import javax.swing.text.html.HTML;
-
 class Ex2_02_2_Referee{
     
     String refName;
@@ -9,51 +7,51 @@ class Ex2_02_2_Referee{
     }
 
     void jankenStart(){
-        messageReferee("‚¶‚á‚ñ‚¯‚ñEEE‚Û‚ñIIIII");
+        messageReferee("ã˜ã‚ƒã‚“ã‘ã‚“ãƒ»ãƒ»ãƒ»ã½ã‚“ï¼ï¼ï¼ï¼ï¼");
     }
 
     void jankenProgress(Ex2_02_2_Player n){
-        messageReferee(n.name + "‚³‚ñ‚Ìè‚Í" + n.handStatus + "‚Å‚µ‚½I");
-        messageReferee("Œ‹‰Ê‚ÍEEE");
+        messageReferee(n.name + "ã•ã‚“ã®æ‰‹ã¯" + n.handStatus + "ã§ã—ãŸï¼");
+        messageReferee("çµæœã¯ãƒ»ãƒ»ãƒ»");
     }
 
     void Judge(Ex2_02_2_Player A, Ex2_02_2_Player B){
         String result = "";
 
-        if(A.handStatus == "ƒO["){                 //A‚³‚ñ‚ªƒO[‚Ìê‡
+        if(A.handStatus == "ã‚°ãƒ¼"){                 //Aã•ã‚“ãŒã‚°ãƒ¼ã®å ´åˆ
 
-            if(B.handStatus == "ƒO["){
-                result = "‚ ‚¢‚±IŸ•‰‚Â‚©‚¸I";
+            if(B.handStatus == "ã‚°ãƒ¼"){
+                result = "ã‚ã„ã“ï¼å‹è² ã¤ã‹ãšï¼";
 
-            }else if(B.handStatus == "ƒ`ƒ‡ƒL"){
-                result = A.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ãƒãƒ§ã‚­"){
+                result = A.name + "ã•ã‚“ã®å‹åˆ©ï¼";
 
-            }else if(B.handStatus == "ƒp["){
-                result = B.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ãƒ‘ãƒ¼"){
+                result = B.name + "ã•ã‚“ã®å‹åˆ©ï¼";
             }
 
-        }else if(A.handStatus == "ƒ`ƒ‡ƒL"){         //A‚³‚ñ‚ªƒ`ƒ‡ƒL‚Ìê‡
+        }else if(A.handStatus == "ãƒãƒ§ã‚­"){         //Aã•ã‚“ãŒãƒãƒ§ã‚­ã®å ´åˆ
 
-            if(B.handStatus == "ƒO["){
-                result = B.name + "‚³‚ñ‚ÌŸ—˜I";
+            if(B.handStatus == "ã‚°ãƒ¼"){
+                result = B.name + "ã•ã‚“ã®å‹åˆ©ï¼";
 
-            }else if(B.handStatus == "ƒ`ƒ‡ƒL"){
-                result = "‚ ‚¢‚±IŸ•‰‚Â‚©‚¸I";
+            }else if(B.handStatus == "ãƒãƒ§ã‚­"){
+                result = "ã‚ã„ã“ï¼å‹è² ã¤ã‹ãšï¼";
 
-            }else if(B.handStatus == "ƒp["){
-                result = A.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ãƒ‘ãƒ¼"){
+                result = A.name + "ã•ã‚“ã®å‹åˆ©ï¼";
             }
 
-        }else if(A.handStatus == "ƒp["){           //A‚³‚ñ‚ªƒp[‚Ìê‡
+        }else if(A.handStatus == "ãƒ‘ãƒ¼"){           //Aã•ã‚“ãŒãƒ‘ãƒ¼ã®å ´åˆ
 
-            if(B.handStatus == "ƒO["){
-                result = A.name + "‚³‚ñ‚ÌŸ—˜I";
+            if(B.handStatus == "ã‚°ãƒ¼"){
+                result = A.name + "ã•ã‚“ã®å‹åˆ©ï¼";
 
-            }else if(B.handStatus == "ƒ`ƒ‡ƒL"){
-                result = B.name + "‚³‚ñ‚ÌŸ—˜I";
+            }else if(B.handStatus == "ãƒãƒ§ã‚­"){
+                result = B.name + "ã•ã‚“ã®å‹åˆ©ï¼";
                 
-            }else if(B.handStatus == "ƒp["){
-                result = "‚ ‚¢‚±IŸ•‰‚Â‚©‚¸I";
+            }else if(B.handStatus == "ãƒ‘ãƒ¼"){
+                result = "ã‚ã„ã“ï¼å‹è² ã¤ã‹ãšï¼";
             }
         
             messageReferee(result);
@@ -61,6 +59,6 @@ class Ex2_02_2_Referee{
         }
     }
     void messageReferee(String msg){
-        System.out.println(refName + "u" + msg + "v");
+        System.out.println(refName + "ã€Œ" + msg + "ã€");
     }
 }
