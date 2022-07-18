@@ -1,18 +1,18 @@
 class Ex2_02_2_Janken{
     public static void main (String[] args) {
 
-        //ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ˆø”‚æ‚è‚R‚Â‚Ì•¶š—ñ‚ğó‚¯æ‚é
-        //ƒCƒ“ƒXƒ^ƒ“ƒX‰»‚Æ“¯‚ÉƒvƒŒƒCƒ„[‚ÆR”»‚Ì–¼‘O‚ğİ’è
+        //ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°ã‚ˆã‚Šï¼“ã¤ã®æ–‡å­—åˆ—ã‚’å—ã‘å–ã‚‹
+        //ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã¨åŒæ™‚ã«ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¨å¯©åˆ¤ã®åå‰ã‚’è¨­å®š
         Ex2_02_2_Player A = new Ex2_02_2_Player(args[0]);
         Ex2_02_2_Player B = new Ex2_02_2_Player(args[1]);
         Ex2_02_2_Referee Ref = new Ex2_02_2_Referee(args[2]);
 
-        Ref.jankenStart();      //‚¶‚á‚ñ‚¯‚ñŠJn R”»‚ªŠ|‚¯º‚ğŒ¾‚¤
-        A.makeHandStatus();     //ƒvƒŒƒCƒ„[‚ªo‚·è‚ğŒˆ‚ß‚é
-        B.makeHandStatus();     //ƒvƒŒƒCƒ„[‚ªo‚·è‚ğŒˆ‚ß‚é
-        Ref.jankenProgress(A);  //R”»‚ªA‚Ìè‚ğŒ¾‚¤
-        Ref.jankenProgress(B);  //R”»‚ªA‚Ìè‚ğŒ¾‚¤
-        Ref.Judge(A,B);            //R”»‚ª”»’è‚µŒ‹‰Ê‚ğŒ¾‚¤
+        Ref.jankenStart();      //ã˜ã‚ƒã‚“ã‘ã‚“é–‹å§‹ å¯©åˆ¤ãŒæ›ã‘å£°ã‚’è¨€ã†
+        A.makeHandStatus();     //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒå‡ºã™æ‰‹ã‚’æ±ºã‚ã‚‹
+        B.makeHandStatus();     //ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒå‡ºã™æ‰‹ã‚’æ±ºã‚ã‚‹
+        Ref.jankenProgress(A);  //å¯©åˆ¤ãŒAã®æ‰‹ã‚’è¨€ã†
+        Ref.jankenProgress(B);  //å¯©åˆ¤ãŒAã®æ‰‹ã‚’è¨€ã†
+        Ref.Judge(A,B);         //å¯©åˆ¤ãŒåˆ¤å®šã—çµæœã‚’è¨€ã†
 
     }
 }
