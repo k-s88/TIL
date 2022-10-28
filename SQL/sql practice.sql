@@ -1,3 +1,5 @@
+課題に沿ったSQL文記述練習
+
 /* 1 */
   SELECT A.EMPLOYEE_ID , A.EMPLOYEE_NM , B.ENTERING_DATE
     FROM employee_mst A INNER JOIN employee_enrollment B
@@ -33,14 +35,14 @@ ORDER BY A.BIRTH_DATE , A.EMPLOYEE_ID ;
   SELECT A.EMPLOYEE_ID , A.EMPLOYEE_NM
     FROM employee_mst A INNER JOIN employee_enrollment B
                         ON A.EMPLOYEE_ID = B.EMPLOYEE_ID
-   WHERE EMPLOYEE_NM LIKE '%�c%'
+   WHERE EMPLOYEE_NM LIKE '%“c%'
 ORDER BY A.EMPLOYEE_ID ;
 
 /* 6 */
   SELECT A.EMPLOYEE_ID ,
          A.EMPLOYEE_NM ,
-         CONCAT (TIMESTAMPDIFF(MONTH , B.ENTERING_DATE , '2017/4/1') DIV 12 , '�N' ,
-                 TIMESTAMPDIFF(MONTH , B.ENTERING_DATE , '2017/4/1') MOD 12 , '����' ) AS ENROLLMENT_PERIOD_YM
+         CONCAT (TIMESTAMPDIFF(MONTH , B.ENTERING_DATE , '2017/4/1') DIV 12 , '”N' ,
+                 TIMESTAMPDIFF(MONTH , B.ENTERING_DATE , '2017/4/1') MOD 12 , 'ƒ–ŒŽ' ) AS ENROLLMENT_PERIOD_YM
     FROM employee_mst A INNER JOIN employee_enrollment B
                         ON A.EMPLOYEE_ID = B.EMPLOYEE_ID
    WHERE B.RETIRED_FLG = 0
